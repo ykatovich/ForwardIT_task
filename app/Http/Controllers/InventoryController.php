@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreInventoryRequest;
 use App\Models\Inventory;
-use Illuminate\Http\Request;
 
 class InventoryController extends Controller
 {
@@ -18,8 +18,19 @@ class InventoryController extends Controller
         return view('inventory.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreInventoryRequest $request)
     {
-        dd("test");
+        $validatedData = $request->validated();
+
+        Inventory::create($validatedData);
+
+        return redirect()->route('inventory.index');
+    }
+
+    public function delete(Inventory $item)
+    {
+        $item->delete();
+
+        return redirect()->route('inventory.index');
     }
 }

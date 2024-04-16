@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('inventories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('material', ['Tērauds', 'Dzelzs']);
+            $table->integer('quantity');
+            $table->enum('material', ['Steel', 'Iron']);
             $table->decimal('weight', 8,2);
             $table->timestamps();
         });

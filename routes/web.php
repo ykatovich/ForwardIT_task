@@ -24,4 +24,5 @@ Route::prefix('inventory')
         Route::get('/list', [InventoryController::class, 'index'])->name('index');
         Route::get('/create', [InventoryController::class, 'create'])->name('create');
         Route::post('/store', [InventoryController::class, 'store'])->name('store');
+        Route::delete('/delete/{item}', [InventoryController::class, 'delete'])->name('delete');
     });

@@ -11,7 +11,7 @@ class StoreInventoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,9 +22,9 @@ class StoreInventoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:100',
+            'name' => 'required|alpha|max:100',
             'quantity' => 'required|integer',
-            'material' => 'required|in:Tērauds,Dzelzs',
+            'material' => 'required|in:Steel,Iron',
             'weight' => 'required|numeric'
         ];
     }

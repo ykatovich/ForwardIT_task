@@ -13,6 +13,7 @@
                 <th scope="col">Quantity</th>
                 <th scope="col">Material</th>
                 <th scope="col">Weight</th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
@@ -23,9 +24,21 @@
                     <td>{{ $inventory->quantity }}</td>
                     <td>{{ $inventory->material }}</td>
                     <td>{{ $inventory->weight }}</td>
+                    <td>
+                        <form action="{{ route('inventory.delete', $inventory) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
+        <div>
+            <a href="{{ route('inventory.create') }}" class="btn btn-dark">Add New Material</a>
+        </div>
     </div>
 @endsection

@@ -12,6 +12,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('https://www.forwardit.ai/solutions') }}">Solutions</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('inventory.index') }}">Inventory List</a>
+                </li>
             </ul>
         </div>
     </div>
