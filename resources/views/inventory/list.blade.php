@@ -38,7 +38,7 @@
             </tbody>
         </table>
         <div>
-            <a href="{{ route('inventory.create') }}" class="btn btn-dark">Add New Material</a>
+            <a href="{{ route('inventory.create') }}" class="btn btn-dark"><strong>Add New Material</strong></a>
         </div>
     </div>
 @endsection
