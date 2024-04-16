@@ -24,7 +24,7 @@ class StoreInventoryRequest extends FormRequest
         return [
             'name' => 'required|string|max:100',
             'quantity' => 'required|integer',
-            'material' => 'required|in:Terauds,Dzelzs',
+            'material' => 'required|in:Tērauds,Dzelzs',
             'weight' => 'required|numeric'
         ];
     }
