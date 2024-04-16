@@ -13,5 +13,6 @@ class Inventory extends Model
         'name',
         'material',
         'weight',
+        'test',
     ];
 }

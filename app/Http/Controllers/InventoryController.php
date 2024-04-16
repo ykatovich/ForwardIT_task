@@ -20,6 +20,6 @@ class InventoryController extends Controller
 
     public function store(Request $request)
     {
-        dd("YEAP");
+        dd("test");
     }
 }
