@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-//Route::prefix('inventory')
-//    ->as('inventory.')
-//    ->group(function () {
-//        Route::get('/list', [InventoryController::class, 'index'])->name('index');
-//        Route::get('/create', [InventoryController::class, 'create'])->name('create');
-//        Route::post('/store', [InventoryController::class, 'store'])->name('store');
-//    });
+Route::prefix('inventory')
+    ->as('inventory.')
+    ->group(function () {
+        Route::get('/list', [InventoryController::class, 'index'])->name('index');
+        Route::get('/create', [InventoryController::class, 'create'])->name('create');
+        Route::post('/store', [InventoryController::class, 'store'])->name('store');
+    });
